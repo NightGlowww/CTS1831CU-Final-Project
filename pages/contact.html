@@ -4,16 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>study</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/study.css">
+    <link rel="stylesheet" href="/styles/aboutme.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+
+    <style>
+        form {
+            margin-bottom: 20px;
+        }
+    
+        /* 设置表单元素的垂直间隔 */
+        form input,
+        form select,
+        form textarea {
+            margin-bottom: 10px;
+        }
+    
+        /* 设置comment输入框的宽度 */
+        form input[name="comment"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        table {
+            margin: auto;
+        }
+    </style>
 
 </head>
 
 <body>
-    <!-- nav bar -->
+    <!--navbar-->
     <header class="d-flex justify-content-between w-100" style="position: absolute; top: 0;">
         <div class="navbar-brand align-self-center">
             <a class="nav-link" href="/index.html">Mike's Website</a>
@@ -43,7 +67,7 @@
 
     <!--carousel-->
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <!--轮播图片-->
+        <!--carouselImg-->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/assets/images/bg1.jpg" class="d-block">
@@ -56,9 +80,10 @@
             </div>
         </div>
 
-        <!--设置中心内容-->
-        <div class="center-text">
-            <h1 style="color: white;">Study</h1>
+        <!--subtitle-->
+        <div class="row justify-content-center center-text">
+            <h1 style="color: white;">Contact</h1>
+            <!-- <div><span id="subtitle" style="color: white;font-size: 33px;"></span></div> -->
         </div>
     </div>
 
@@ -67,40 +92,35 @@
         <div class="container mt-5">
             <div class="row justify-content-center align-items-stretch">
 
-                <!-- infoCard -->
-                <div class="col-md-3">
-                    <div class="card h-100" style="padding: 20px;">
-                        <!-- avatar -->
-                        <img class="card-img-top" src="/assets/images/profile_pic.jpg" alt="Card image cap">
-
-                        <!-- profile -->
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <h5 class="card-title">Mengfei Tan</h5>
-                            <p class="card-text">Stay hungry Stay foolish</p>
-                            <div class="button-container text-center">
-                                <a class="button" href="https://github.com/NightGlowww"><i class="fab fa-github"></i>
-                                    <span>Follow Me</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- contentCard  -->
                 <div class="col-md-6">
                     <div class="card h-100" style="width: 100%;">
                         <div class="card-body">
-                            <h2 class="card-title">Article Title</h2>
-                            <p class="card-text">Article content...</p>
+                            <h2 class="card-title">Comment</h2>
+                            <div class="divider"></div>
+                            <div>
+                                <form>
+                                    <table>
+                                        <tr style>
+                                            <td><input type="text" name="username" value="Your name"></td>
+                                            <td><input type="email" name="usermail" value="email"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" name="comment" value="Input your comment">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <input type="submit">
+                                </form>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-
-
 
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
