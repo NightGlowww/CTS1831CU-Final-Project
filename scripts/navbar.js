@@ -13,15 +13,16 @@ document.getElementById("navbar").innerHTML = `
                     <a class="nav-link" href="/pages/study.html"><span class="fa fa-book"></span> Study</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#"><span class="fa fa-heart"></span> Hobby</a>
+                    <a class="nav-link" href="/pages/hobby.html"><span class="fa fa-heart"></span> Hobby</a>
                 </li>
                 <li>
                     <a class="nav-link" href="/pages/contact.html"><span class="fas fa-address-book"></span> Contact</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="/pages/aboutme.html"><span class="far fa-address-card"></span> About me</a>
+                    <a class="nav-link" href="/pages/aboutme.html"><span class="fas fa-address-card"></span> About me</a>
                 </li>
             </ul>
         </nav>
     </header>
+    
 `;
