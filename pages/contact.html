@@ -11,29 +11,6 @@
     <link rel="stylesheet" href="/styles/aboutme.css">
     <link rel="stylesheet" href="/styles/contact.css">
 
-    <style>
-        form {
-            margin-bottom: 20px;
-        }
-    
-        /* 设置表单元素的垂直间隔 */
-        form input,
-        form select,
-        form textarea {
-            margin-bottom: 10px;
-        }
-    
-        /* 设置comment输入框的宽度 */
-        form input[name="comment"] {
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        table {
-            margin: auto;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -56,7 +33,7 @@
                     <a class="nav-link" href="#"><span class="fa fa-laptop"></span> Work</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#"><span class="fas fa-address-book"></span> Contact</a>
+                    <a class="nav-link" href="/pages/contact.html"><span class="fas fa-address-book"></span> Contact</a>
                 </li>
                 <li>
                     <a class="nav-link" href="/pages/aboutme.html"><span class="fa fa-heart"></span> About me</a>
@@ -83,7 +60,6 @@
         <!--subtitle-->
         <div class="row justify-content-center center-text">
             <h1 style="color: white;">Contact</h1>
-            <!-- <div><span id="subtitle" style="color: white;font-size: 33px;"></span></div> -->
         </div>
     </div>
 
@@ -93,31 +69,35 @@
             <div class="row justify-content-center align-items-stretch">
 
                 <!-- contentCard  -->
-                <div class="col-md-6">
-                    <div class="card h-100" style="width: 100%;">
+                <article class="col-md-6">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Comment</h2>
                             <div class="divider"></div>
                             <div>
                                 <form>
                                     <table>
-                                        <tr style>
-                                            <td><input type="text" name="username" value="Your name"></td>
-                                            <td><input type="email" name="usermail" value="email"></td>
+                                        <tr>
+                                            <td><input type="text" name="username" placeholder="Nickname"></td>
+                                            <td><input type="email" name="usermail" placeholder="Email"></td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <input type="text" name="comment" value="Input your comment">
+                                            <td colspan="2">
+                                                <textarea name="comment"
+                                                    placeholder="Please leave your comment"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="submit" value="Submit">
                                             </td>
                                         </tr>
                                     </table>
-                                    <input type="submit">
                                 </form>
                             </div>
-                            
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </main>
@@ -129,6 +109,7 @@
     <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99"
         src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
     <script src="/scripts/index.js"></script>
+    <script src="/scripts/contact.js"></script>
 </body>
 
 </html>
