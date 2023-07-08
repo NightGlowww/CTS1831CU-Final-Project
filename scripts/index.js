@@ -71,3 +71,7 @@ function subtitleType() {
         backSpeed: 50
     });
 }
+
+$(function(){
+    $("#navbar").load("navbar.html"); 
+});
