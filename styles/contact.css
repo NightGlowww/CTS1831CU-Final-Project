@@ -1,8 +1,35 @@
+:root {
+    --divider-color: rgb(170, 234, 255);
+    --divider-icon-left: 20px;
+    --transition-time: 2s;
+    --card-width: 100%;
+    --form-margin-bottom: 10px;
+    --form-width: 100%;
+    --table-margin: auto;
+    --table-width: 100%;
+    --table-td-padding: 10px;
+    --table-td-border: 1px solid #ddd;
+    --table-td-bg-color: #f9f9f9;
+    --submit-btn-bg-color: #5cb85c;
+    --submit-btn-color: white;
+    --submit-btn-padding: 6px 12px;
+    --submit-btn-border: none;
+    --submit-btn-border-radius: 4px;
+    --submit-btn-cursor: pointer;
+    --submit-btn-float: right;
+    --submit-btn-hover-bg-color: #45a049;
+    --input-focus-box-shadow: 0 0 5px #3c9dff;
+    --input-focus-border: 1px solid #3c9dff;
+    --input-effect-bg: rgba(255, 255, 0, 0.2);
+    --input-effect-border-radius: 0;
+    --input-effect-animation: explode 0.5s linear;
+}
+
 .divider {
     position: relative;
-    width: 100%;
+    width: var(--card-width);
     height: 2px;
-    border-top: 3px dashed rgb(170, 234, 255);
+    border-top: 3px dashed var(--divider-color);
     text-align: left;
     margin: 20px 0;
 }
@@ -11,66 +38,65 @@
     content: '\f0c4';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: rgb(170, 234, 255);
+    color: var(--divider-color);
     font-size: 1.5em;
     position: absolute;
     top: -0.8em; 
-    left: 20px;
-    transition: all 2s ease-in-out;
+    left: var(--divider-icon-left);
+    transition: all var(--transition-time) ease-in-out;
 }
 
-
 .divider:hover:before {
-    left: calc(100% - 20px);
+    left: calc(var(--card-width) - var(--divider-icon-left));
 }
 
 header {
     position: absolute;
     top: 0;
-    width: 100%;
+    width: var(--card-width);
 }
 
 .card.h-100 {
-    width: 100%;
+    width: var(--card-width);
 }
 
 form input,
 form select,
 form textarea {
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom: var(--form-margin-bottom);
+    width: var(--form-width);
     box-sizing: border-box;
 }
 
 table {
-    margin: auto;
+    margin: var(--table-margin);
     border-collapse: collapse;
-    width: 100%;
+    width: var(--table-width);
 }
 
 table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    padding: var(--table-td-padding);
+    border: var(--table-td-border);
+    background-color: var(--table-td-bg-color);
 }
 
 input[type="submit"] {
-    background-color: #5cb85c;
-    color: white;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
+    background-color: var(--submit-btn-bg-color);
+    color: var(--submit-btn-color);
+    padding: var(--submit-btn-padding);
+    border: var(--submit-btn-border);
+    border-radius: var(--submit-btn-border-radius);
+    cursor: var(--submit-btn-cursor);
+    float: var(--submit-btn-float);
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: var(--submit-btn-hover-bg-color);
 }
 
 .input-focused {
-    box-shadow: 0 0 5px #3c9dff;
-    border: 1px solid #3c9dff;
+    box-shadow: var(--input-focus-box-shadow);
+    border: var(--input-focus-border);
 }
 
 @keyframes explode {
@@ -94,11 +120,11 @@ input[type="submit"]:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: var(--card-width);
     height: 100%;
-    background: rgba(255, 255, 0, 0.2);
-    border-radius: 0;
-    animation: explode 0.5s linear;
+    background: var(--input-effect-bg);
+    border-radius: var(--input-effect-border-radius);
+    animation: var(--input-effect-animation);
     transform: scale(0);
     opacity: 0;
 }
