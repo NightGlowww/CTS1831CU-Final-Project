@@ -25,7 +25,7 @@
 }
 
 .info-card {
-    max-height: 500px;
+    max-height: 450px;
     overflow: auto;
 }
 
@@ -67,5 +67,4 @@
     height: auto;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
-    padding-top: 10px;
 }
